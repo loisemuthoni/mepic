@@ -18,4 +18,16 @@ class Category(models.Model):
         return self.name
 
     def save_category(self):
-        self.save()        
+        self.save()     
+
+
+class Images(models.Model):
+    image_path = models.ImageField(upload_to='image/')
+    name = models.CharField(max_length=30)
+    description = models.CharField(max_length=100)
+    pub_date = models.DateTimeField(auto_now_add=True)
+    location = models.ForeignKey(Location)
+    category = models.ForeignKey(Category)
+
+    def save_images(self):
+        self.save()

@@ -76,9 +76,10 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'mepic',
         'USER': 'moringa',
         'password': '12345'
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

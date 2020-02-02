@@ -31,3 +31,15 @@ class Images(models.Model):
 
     def save_images(self):
         self.save()
+
+    @classmethod
+    def search_by_category(cls, search_term):
+        image = cls.objects.filter(category__name__icontains=search_term)
+        return image
+
+    def __str__(self):
+        return self.description
+
+    class Meta:
+        ordering=["-pub_date"]
+

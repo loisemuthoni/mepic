@@ -1,4 +1,4 @@
-# MEPIC
+# MEPIC GALLERY
 - MEPIC is a platform where users can display their photos for others to see, they can share the photos by coping the photo link and also add different categories of photo. Their friends can like the photos too.
 
 ## Author
@@ -13,7 +13,7 @@ The following command installs all the application requirements
 ## Installations
 
 Run 
-``git clone https://github.com/KEBASOH/BLOG-APP.git``
+``git clone https://github.com/mepic/mepic.git``
 
 or download the zip file from github.
 
@@ -45,7 +45,7 @@ After extracting the files,
 -  As a user, I would like to view photos based on the location they were taken.
 
 ## Behavior Driven Development
-
+<img src="landing.png">
 
 ## Technologies Used
 - Python

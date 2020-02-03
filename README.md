@@ -44,6 +44,7 @@ After extracting the files,
 -  As a user, I would like to copy a link to the photo to share with my friends.
 -  As a user, I would like to view photos based on the location they were taken.
 
+
 ## Behavior Driven Development
 <img src="landing.png">
 

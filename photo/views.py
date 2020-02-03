@@ -20,3 +20,20 @@ def images(request, images_id):
     except DoesNotExist:
         raise Http404()
     return render(request,"gall/gallery.html", {"images":images})
+
+def search_image(request):
+    if 'images' in request.GET and request.GET['images']:
+        search_term = request.GET["images"]
+        searched_images = Images.search_by_category(search_term)
+        message = f'{search_term}'
+        location = Location.objects.all()
+        context = {
+            "location":location,
+            "message":message,
+            "images":searched_images
+        }
+        return render(request, 'gall/search.html',context)
+
+    else:
+        message = "You haven't searched for any image"
+        return render(request, 'gall/search.html', {"message":message})

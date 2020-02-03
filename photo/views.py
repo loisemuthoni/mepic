@@ -13,3 +13,10 @@ def home(request):
         "location":location,
     }
     return render(request, 'home.html', context)
+
+def images(request, images_id):
+    try:
+        images = Images.objects.get(id = images_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"gall/gallery.html", {"images":images})

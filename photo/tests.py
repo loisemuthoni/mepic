@@ -35,5 +35,12 @@ class ImageTest(TestCase):
         self.category = Category(name = 'name')
         self.category.save()
         self.image = Images(image_path = 'irene.jpg', name = 'irene', description = 'The best food eating game', location = self.location, category = self.category)
+    
+    def test_instance(self):
+        self.assertTrue(isinstance(self.image, Images))
 
+    def test_save(self):
+        self.image.save_images()
+        image = Images.objects.all()
+        self.assertTrue(len(image) > 0)
 

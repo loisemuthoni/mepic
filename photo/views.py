@@ -19,7 +19,7 @@ def images(request, images_id):
         images = Images.objects.get(id = images_id)
     except DoesNotExist:
         raise Http404()
-    return render(request,"gall/gallery.html", {"images":images})
+    return render(request,"pic/gallery.html", {"images":images})
 
 def search_image(request):
     if 'images' in request.GET and request.GET['images']:
@@ -36,7 +36,7 @@ def search_image(request):
 
     else:
         message = "You haven't searched for any image"
-        return render(request, 'gall/search.html', {"message":message})
+        return render(request, 'pic/search.html', {"message":message})
 
 def display_by_location(request, id):
     location = Location.objects.all()

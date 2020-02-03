@@ -13,7 +13,7 @@ The following command installs all the application requirements
 ## Installations
 
 Run 
-``git clone https://github.com/mepic/mepic.git``
+``git clone https://github.com/loisemuthoni/mepic.git``
 
 or download the zip file from github.
 

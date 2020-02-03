@@ -37,3 +37,12 @@ def search_image(request):
     else:
         message = "You haven't searched for any image"
         return render(request, 'gall/search.html', {"message":message})
+
+def display_by_location(request, id):
+    location = Location.objects.all()
+    images = Images.objects.filter(location__id=id)
+    context = {
+        "location":location,
+        "images":images,
+    }
+    return render(request, "location.html", context)

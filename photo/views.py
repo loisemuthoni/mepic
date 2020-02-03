@@ -1,4 +1,4 @@
-from django.shortcuts import rende
+from django.shortcuts import render
 from django.http import HttpResponse, Http404
 from django.templatetags.static import static
 from .models import Images, Location, Category
@@ -32,7 +32,7 @@ def search_image(request):
             "message":message,
             "images":searched_images
         }
-        return render(request, 'gall/search.html',context)
+        return render(request, 'pic/search.html',context)
 
     else:
         message = "You haven't searched for any image"

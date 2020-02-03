@@ -62,7 +62,7 @@ STATICFILES_DIRS = (
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = '4$4^p5$zu()u9*xtwts93thj2bekg6vxl*y6-muh+-nvcov69*'
+SECRET_KEY = '4$4^p5$zu()u9*xtwts93thj2bekg6vxl*y6-muh+-nvcov69*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -116,19 +116,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'gallery.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'mepic',
-#         'USER': 'moringa',
-#         'password': '12345'
-#         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 
 # Password validation

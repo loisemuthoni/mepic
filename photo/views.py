@@ -47,11 +47,3 @@ def display_by_location(request, id):
     }
     return render(request, "location.html", context)
 
-def display_by_category(request, id):
-    category = Category.objects.all()
-    images = Images.objects.filter(category__id=id)
-    context = {
-        "category":category,
-        "images":images,
-    }
-    return render(request, "location.html", context)

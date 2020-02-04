@@ -27,18 +27,6 @@
                    {% endfor %}
                  </div>
                 </div>
-                <div class="btn-group dropright">
-                  <button type="button" class="btn btn-info dropdown-toggle mr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   Category
-                  </button>
-                  <div class="dropdown-menu">
-                    {% for cat in category %}
-                      <a href="{% url 'display_by_category' loc.id %}">
-                      <p class="text-dark ml-2">{{cat.name}}</p>
-                    </a>
-                    {% endfor %}
-                  </div>
-                 </div>
                </div>
                <form class="navbar- ml-auto" method="get" role="search" action="{% url 'search_image' %}">
                  <div class="input-group">
